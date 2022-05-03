@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /comments/feed/
+Disallow: /archives/
+Disallow: /preview/
+Disallow: /profiles/
+Disallow: /search/
+Disallow: /wp-admin/
+
+User-agent: Mediapartners-Google* 
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://taishin-miyamoto.com/sitemap.xml
