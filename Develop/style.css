@@ -125,10 +125,6 @@ header {
     border-radius: 20px;
     user-select: none; 
 }
-.app-icon-mac {
-    max-height: 100px;
-    user-select: none; 
-}
 .app-title {
     font-size: 20px;
     text-align: left;
