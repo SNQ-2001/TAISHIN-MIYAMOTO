@@ -6,7 +6,7 @@
 body {
     position: relative;
     height: 100%;
-    background-color: #e0e5ec;
+    background-color: #2C2F33;
     font-family: 'Arial', sans-serif;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -50,17 +50,14 @@ img {
 header {
     /* 選択禁止 */
     user-select: none;
-}
-
-/* ヘッダーSVG */
-.header-svg {
     /* 横幅いっぱい */
     width: 100vw;
-    height: 100px;
+    height: 63px;
     margin-left: calc(-50vw + 50%);
-    text-align: center;
-    filter: drop-shadow(0px 3px 5px #a3b1c6);
+    color: #FEA808;
+    background-color: #25272A;
 }
+
 /* タイトル */
 .title {
     position: absolute;
@@ -74,14 +71,16 @@ header {
     position: relative;
     display: inline-block;
     padding: 0 55px;
-    margin-top: 0;
+    /* margin-top: 5px; */
     margin-bottom: 5px;
+    color: #FEA808;
 }
 .item-title {
     position: relative;
     display: inline-block;
     padding: 0 55px;
     margin-bottom: 5px;
+    color: #FEA808;
 }
 .item-title:before, .item-title:after, .item-title-top:before, .item-title-top:after  {
     content: '';
@@ -90,8 +89,8 @@ header {
     display: inline-block;
     width: 45px;
     height: 2px;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-top: solid 1px #FEA808;
+    border-bottom: solid 1px #FEA808;
 }
 .item-title:before, .item-title-top:before {
     left:0;
@@ -108,10 +107,9 @@ header {
 }
 .item {
     border-radius: 10px;
-    background: #e0e5ec;
+    background: #25272A;
     padding: 15px;
     text-align: center;
-    box-shadow: 3px 3px 5px 0 #a3b1c6, -3px -3px 5px 0 #ffffff;
     max-height: auto;
 }
 .app-link {
@@ -132,7 +130,7 @@ header {
 .app-title {
     font-size: 20px;
     text-align: left;
-    color: black;
+    color: #e0e5ec;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
@@ -171,41 +169,8 @@ ul li {
     overflow: hidden; 
 }
 
-.qiita-title {
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 0;
-    margin-left: 10px;
-    margin-bottom: 0;
-    color: black;
-}
-
-.qiita-create {
-    font-size: 13px;
-    margin-top: 0;
-    margin-left: 10px;
-    margin-bottom: 0;
-    color: rgb(105, 105, 105);
-}
-
-
-
 footer {
     height: 60px;
-    /* 選択禁止 */
-    user-select: none;
-}
-
-.footer-svg {
-    /* 横幅いっぱい */
-    width: 100vw;
-    height: 100px;
-    margin-left: calc(-50vw + 50%);
-    /* ←絶対位置 */
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    filter: drop-shadow(0px -3px 5px #a3b1c6);
     /* 選択禁止 */
     user-select: none;
 }
@@ -214,6 +179,7 @@ footer {
     font-size: 11px;
     margin-top: 8px;
     margin-bottom: 8px;
+    color: #e0e5ec;
 }
 
 .footer-main {
@@ -222,6 +188,11 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 11px;
+    background-color: #25272A;
+    /* 横幅いっぱい */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-bottom: 5px;
 }
 
 .footer-tool-bar {
