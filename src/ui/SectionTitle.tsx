@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 interface SectionTitleProps {
   title: string;
@@ -7,9 +7,9 @@ interface SectionTitleProps {
 export default function SectionTitle({ title }: SectionTitleProps) {
   return (
     <Box position="relative" display="inline-block" paddingX="55px" marginBottom={3}>
-      <Heading as="h1" size="md" color="#FEA808" textTransform="none">
+      <Text fontSize="2em" fontWeight="bold" color="orange">
         {title}
-      </Heading>
+      </Text>
       {/* 左線 */}
       <Box
         position="absolute"
@@ -17,9 +17,9 @@ export default function SectionTitle({ title }: SectionTitleProps) {
         top="50%"
         left="0"
         width="45px"
-        height="2px"
-        borderTop="solid 1px #FEA808"
-        borderBottom="solid 1px #FEA808"
+        height={"2px"}
+        borderTop="solid 1px orange"
+        borderBottom="solid 1px orange"
       />
       {/* 右線 */}
       <Box
