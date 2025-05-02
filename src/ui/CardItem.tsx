@@ -23,7 +23,7 @@ export default function CardItem({
       <VStack
         w="100%" // VStackを親要素の幅まで広げる
         bg={useColorModeValue('gray.100', 'gray.900')}
-        borderRadius="md"
+        borderRadius="10px"
         p={4}
         align="start"
         boxShadow="md"
