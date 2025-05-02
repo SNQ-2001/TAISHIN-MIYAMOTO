@@ -70,26 +70,26 @@ export const appData = [
       },
       {
         url: "https://apps.apple.com/us/app/qiitawidget/id6448868888",
-        iconSrc: "https://taishin-miyamoto.com/src/assets/QiitaWidget.png",
+        iconSrc: "https://taishin-miyamoto.com/image/QiitaWidget.png",
         title: "QiitaWidget",
         details: "Qiitaの記事一覧をホーム画面に表示",
       },
       {
         url: "https://apps.apple.com/us/app/zennwidget/id6448756495",
-        iconSrc: "https://taishin-miyamoto.com/src/assets/ZennWidget.png",
+        iconSrc: "https://taishin-miyamoto.com/image/ZennWidget.png",
         title: "ZennWidget",
         details: "Zennの記事一覧をホーム画面に表示",
       },
       {
         url: "https://apps.apple.com/jp/app/redsheetcamera/id6451382182",
-        iconSrc: "https://taishin-miyamoto.com/src/assets/RedSheetCamera.png",
+        iconSrc: "https://taishin-miyamoto.com/image/RedSheetCamera.png",
         title: "赤シートカメラ",
         details: "赤シートで暗記を促進",
       },
       {
         url: "https://apps.apple.com/jp/app/%E4%BA%A4%E9%80%9A%E7%B3%BBic%E6%AE%8B%E9%AB%86/id6467140002",
         iconSrc:
-          "https://taishin-miyamoto.com/src/assets/TrafficICCardBalanceReader.png",
+          "https://taishin-miyamoto.com/image/TrafficICCardBalanceReader.png",
         title: "交通系IC残高",
         details: "交通系ICカードの残高を確認",
       },

@@ -29,7 +29,7 @@ export default function CardItem({
         boxShadow="md"
         transition="transform 0.2s"
       >
-        <Image src={iconSrc} alt={title} boxSize="100px" borderRadius="md" />
+        <Image src={iconSrc} alt={title} boxSize="100px" borderRadius="20px" />
         <Heading as="h3" size="sm" color="#e0e5ec">
           {title}
         </Heading>
