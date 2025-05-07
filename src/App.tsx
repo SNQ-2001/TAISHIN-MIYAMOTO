@@ -9,13 +9,12 @@ export default function Nav() {
     <NavigationView>
       <Box p={3}>
         {appData.map(({ section, items }) => (
-          // セクションごとにタイトルとアイテムを表示
           <Box key={section} mb={8}>
             <SectionTitle title={section} />
             <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={3}>
               {items.map(({ url, iconSrc, title, details }) => (
                 <CardItem
-                  key={title} // 一意な値をkeyに使用
+                  key={title}
                   url={url}
                   iconSrc={iconSrc}
                   title={title}
