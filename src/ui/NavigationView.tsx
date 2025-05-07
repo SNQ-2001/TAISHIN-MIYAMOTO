@@ -17,6 +17,11 @@ export default function NavigationView({ children }: { children: React.ReactNode
         </Flex>
       </Box>
       {children}
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'center'}>
+          <Text fontSize="0.875rem" pl="0.5rem" color="gray.500">© 2025 Taishin Miyamoto</Text>
+        </Flex>
+      </Box>
     </>
   )
 }
