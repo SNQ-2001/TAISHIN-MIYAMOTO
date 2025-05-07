@@ -89,9 +89,16 @@ export const appData = [
       {
         url: "https://apps.apple.com/jp/app/%E4%BA%A4%E9%80%9A%E7%B3%BBic%E6%AE%8B%E9%AB%86/id6467140002",
         iconSrc:
-          "https://taishin-miyamoto.com/image/TrafficICCardBalanceReader.png",
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/da/51/19da5168-c1a9-bd44-f662-8aba3f8be98f/Suica-0-1x_U007ephone-0-1-85-220-0.png/230x0w.webp",
         title: "交通系IC残高",
         details: "交通系ICカードの残高を確認",
+      },
+      {
+        url: "https://apps.apple.com/jp/app/%E3%81%B5%E3%81%9F%E3%82%8A%E3%81%A7%E5%B0%86%E6%A3%8B/id6744576655",
+        iconSrc:
+          "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c4/43/b3/c443b3ae-0c55-d662-8e0b-721f79fa6f05/AppIcon-0-0-1x_U007epad-0-1-85-220.png/230x0w.webp",
+        title: "ふたりで将棋",
+        details: "対面対局に特化した、将棋アプリ",
       },
     ],
   },
