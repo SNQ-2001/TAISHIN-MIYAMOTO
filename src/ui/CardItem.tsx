@@ -24,18 +24,21 @@ export default function CardItem({
         w="100%" // VStackを親要素の幅まで広げる
         bg={useColorModeValue('gray.100', 'gray.900')}
         borderRadius="10px"
+        gap={3}
         p={4}
-        align="start"
+        align="baseline"
         boxShadow="md"
         transition="transform 0.2s"
       >
         <Image src={iconSrc} alt={title} boxSize="100px" borderRadius="20px" />
-        <Heading as="h3" size="sm" color="#e0e5ec">
-          {title}
-        </Heading>
-        <Text fontSize="sm" color="#848484">
-          {details}
-        </Text>
+        <VStack gap={1} align={'start'}>
+          <Heading as="h3" size="sm" color="#e0e5ec">
+            {title}
+          </Heading>
+          <Text fontSize="sm" color="#848484">
+            {details}
+          </Text>
+        </VStack>
       </VStack>
     </Link>
   );
