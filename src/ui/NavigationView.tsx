@@ -1,4 +1,4 @@
-import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode"
+import { useColorModeValue } from "@/components/ui/color-mode"
 import { Stack, Flex, Box, Text } from "@chakra-ui/react"
 
 export default function NavigationView({ children }: { children: React.ReactNode }) {

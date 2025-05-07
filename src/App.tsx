@@ -2,7 +2,7 @@ import CardItem from "./ui/CardItem"
 import NavigationView from "./ui/NavigationView"
 import { Grid, Box } from "@chakra-ui/react"
 import SectionTitle from "./ui/SectionTitle"
-import { appData } from "./data/AppData"
+import { appData } from "./data/appData"
 
 export default function Nav() {
   return (
