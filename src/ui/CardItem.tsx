@@ -1,4 +1,5 @@
 import { ServiceStatus } from '@/model/ServiceStatus';
+import { useColorModeValue } from "@/components/ui/color-mode"
 import { Link, VStack, Image, Heading, Text, Box, HStack } from '@chakra-ui/react';
 
 export default function CardItem({
@@ -27,7 +28,7 @@ export default function CardItem({
     >
       <VStack
         w="100%"
-        bg={'gray.900'}
+        bg={useColorModeValue('gray.100', 'gray.900')}
         borderRadius="10px"
         gap={3}
         p={4}
@@ -40,7 +41,7 @@ export default function CardItem({
         <VStack gap={1} align={'start'} w="100%">
           <HStack w="100%" align="center">
             {/* タイトル */}
-            <Heading as="h3" size="md" color={disabled ? '#9a9a9a' : '#e0e5ec'}>
+            <Heading as="h3" size="md" color={'primary'}>
               {title}
             </Heading>
             {/* ServiceStatusラベル */}
@@ -58,11 +59,11 @@ export default function CardItem({
               </Box>
             )}
           </HStack>
-          <Text fontSize="sm" color={disabled ? '#c0c0c0' : '#848484'}>
+          <Text fontSize="sm" color={'gray'}>
             {details}
           </Text>
         </VStack>
       </VStack>
-    </Link>
+    </Link >
   );
 }
