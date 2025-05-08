@@ -1,5 +1,5 @@
 import { ServiceStatus } from '@/model/ServiceStatus';
-import { Link, VStack, Image, Heading, Text } from '@chakra-ui/react';
+import { Link, VStack, Image, Heading, Text, Box, HStack } from '@chakra-ui/react';
 
 export default function CardItem({
   url,
@@ -17,11 +17,15 @@ export default function CardItem({
   const isServiceEnded = status === ServiceStatus.ENDED; // サービス終了状態判定
   const disabled = isServiceEnded; // `ENDED`なら`disabled`をtrueに
 
+  // ラベルのスタイル
+  const labelColor = isServiceEnded ? 'red.500' : 'green.500'; // 状態による色分け
+  const labelText = isServiceEnded ? 'サービス終了' : 'サービス提供中'; // 状態に応じたテキスト
+
   return (
     <Link
       href={disabled ? undefined : url} // disabledのときリンクを無効化
-      target={disabled ? undefined : "_blank"} // disabledのときリンク属性を無効化
-      rel={disabled ? undefined : "noopener noreferrer"} // disabledのときリンク属性を無効化
+      target={disabled ? undefined : '_blank'} // disabledのときリンク属性を無効化
+      rel={disabled ? undefined : 'noopener noreferrer'} // disabledのときリンク属性を無効化
       style={{ textDecoration: 'none', pointerEvents: disabled ? 'none' : 'auto' }} // pointerEventsでタップ無効化
       w="100%"
     >
@@ -37,10 +41,27 @@ export default function CardItem({
         opacity={disabled ? 0.5 : 1} // 無効化時にカード全体の透明度を下げる
       >
         <Image src={iconSrc} alt={title} boxSize="100px" borderRadius="20px" />
-        <VStack gap={1} align={'start'}>
-          <Heading as="h3" size="sm" color={disabled ? '#9a9a9a' : '#e0e5ec'}>
-            {title}
-          </Heading>
+        <VStack gap={1} align={'start'} w="100%">
+          <HStack w="100%" align="center">
+            {/* タイトル */}
+            <Heading as="h3" size="md" color={disabled ? '#9a9a9a' : '#e0e5ec'}>
+              {title}
+            </Heading>
+            {/* ServiceStatusラベル */}
+            {isServiceEnded && (
+              <Box
+                bg={labelColor}
+                color="white"
+                px={2}
+                py={0.5}
+                borderRadius="5px"
+                fontSize="2xs"
+                fontWeight="bold"
+              >
+                サービス終了
+              </Box>
+            )}
+          </HStack>
           <Text fontSize="sm" color={disabled ? '#c0c0c0' : '#848484'}>
             {details}
           </Text>
