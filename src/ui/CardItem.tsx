@@ -14,12 +14,8 @@ export default function CardItem({
   details: string;
   status: ServiceStatus;
 }) {
-  const isServiceEnded = status === ServiceStatus.ENDED; // サービス終了状態判定
-  const disabled = isServiceEnded; // `ENDED`なら`disabled`をtrueに
-
-  // ラベルのスタイル
-  const labelColor = isServiceEnded ? 'red.500' : 'green.500'; // 状態による色分け
-  const labelText = isServiceEnded ? 'サービス終了' : 'サービス提供中'; // 状態に応じたテキスト
+  const isServiceEnded = status === ServiceStatus.ENDED;
+  const disabled = isServiceEnded;
 
   return (
     <Link
@@ -50,7 +46,7 @@ export default function CardItem({
             {/* ServiceStatusラベル */}
             {isServiceEnded && (
               <Box
-                bg={labelColor}
+                bg={'red.500'}
                 color="white"
                 px={2}
                 py={0.5}
