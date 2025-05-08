@@ -138,7 +138,7 @@ export const appData: AppDataSection[] = [
     ],
   },
   {
-    section: "MacOS",
+    section: "macOS",
     items: [
       {
         url: "https://apps.apple.com/jp/app/neumorphism-for-swiftui/id1619280099",
