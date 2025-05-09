@@ -2,6 +2,7 @@ import appleSystemStatusMenuBar from "../assets/apple_system_status_menu_bar.png
 import chatgptContinueButton from "../assets/chatgpt_continue_button.png";
 import iconStudio from "../assets/icon_studio.png";
 import redSheetCamera from "../assets/red_sheet_camera.png";
+import nostpix from "../assets/nostpix.png";
 import photon from "../assets/photon.png";
 import neumorphismForSwiftui from "../assets/neumorphism_for_swiftui.png";
 import level from "../assets/level.png";
@@ -70,6 +71,14 @@ export const appData: AppDataSection[] = [
         iconSrc: photon,
         title: "PhotoN",
         details: "スワイプ式の写真整理アプリ",
+        status: ServiceStatus.ENDED,
+      },
+      {
+        url: "https://apps.apple.com/jp/app/nostpix/id6468007660",
+        iconSrc: nostpix,
+        title: "Nostpix",
+        details:
+          "デジカメで撮ったようなレトロな写真をスマホで簡単に撮影し、共有できるタイムスリップSNS",
         status: ServiceStatus.ENDED,
       },
       {
