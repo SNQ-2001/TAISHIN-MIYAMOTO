@@ -1,37 +1,28 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text } from "@chakra-ui/react";
 
 interface SectionTitleProps {
   title: string;
 }
 
 export default function SectionTitle({ title }: SectionTitleProps) {
+  const lineStyles = {
+    position: "absolute",
+    top: "50%",
+    width: "45px",
+    height: "2px",
+    borderTop: "solid 1px orange",
+    borderBottom: "solid 1px orange",
+  };
+
   return (
-    <Box position="relative" display="inline-block" paddingX="55px" marginBottom={3}>
+    <Box position="relative" display="inline-block" px="55px" mb={3}>
       <Text fontSize="2em" fontWeight="bold" color="orange">
         {title}
       </Text>
       {/* 左線 */}
-      <Box
-        position="absolute"
-        content="''"
-        top="50%"
-        left="0"
-        width="45px"
-        height={"2px"}
-        borderTop="solid 1px orange"
-        borderBottom="solid 1px orange"
-      />
+      <Box {...lineStyles} left="0" />
       {/* 右線 */}
-      <Box
-        position="absolute"
-        content="''"
-        top="50%"
-        right="0"
-        width="45px"
-        height="2px"
-        borderTop="solid 1px #FEA808"
-        borderBottom="solid 1px #FEA808"
-      />
+      <Box {...lineStyles} right="0" />
     </Box>
   );
 }
