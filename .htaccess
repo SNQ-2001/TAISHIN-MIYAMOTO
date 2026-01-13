@@ -1,0 +1,14 @@
+php_value max_execution_time 0
+SetEnvIf Request_URI ".*" AllowForeignWpLogin
+SetEnvIf Request_URI ".*" AllowForeignRestApi
+SetEnvIf Request_URI ".*" AllowForeignXmlrpc
+SetEnvIf Request_URI ".*" AllowForeignWlwmanifest
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # normalize lowercase /shadowban to /ShadowBan
+  RewriteCond %{REQUEST_URI} ^/shadowban/?$ [NC]
+  RewriteRule ^ /ShadowBan/ [R=301,L]
+  RewriteCond %{REQUEST_URI} ^/shadowban/(.+)$ [NC]
+  RewriteRule ^ /ShadowBan/%1 [R=301,L]
+</IfModule>
