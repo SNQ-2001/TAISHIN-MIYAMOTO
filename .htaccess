@@ -6,9 +6,11 @@ SetEnvIf Request_URI ".*" AllowForeignWlwmanifest
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  # normalize lowercase /shadowban to /ShadowBan
+  # normalize lowercase /shadowban to /ShadowBan (avoid loop)
+  RewriteCond %{REQUEST_URI} !^/ShadowBan/ [NC]
   RewriteCond %{REQUEST_URI} ^/shadowban/?$ [NC]
   RewriteRule ^ /ShadowBan/ [R=301,L]
+  RewriteCond %{REQUEST_URI} !^/ShadowBan/ [NC]
   RewriteCond %{REQUEST_URI} ^/shadowban/(.+)$ [NC]
   RewriteRule ^ /ShadowBan/%1 [R=301,L]
 </IfModule>
