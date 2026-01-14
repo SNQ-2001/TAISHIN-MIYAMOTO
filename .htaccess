@@ -13,4 +13,11 @@ SetEnvIf Request_URI ".*" AllowForeignWlwmanifest
   RewriteCond %{REQUEST_URI} !^/ShadowBan/ [NC]
   RewriteCond %{REQUEST_URI} ^/shadowban/(.+)$ [NC]
   RewriteRule ^ /ShadowBan/%1 [R=301,L]
+
+  # SPA fallback for /ShadowBan/*
+  RewriteCond %{REQUEST_URI} ^/ShadowBan/ [NC]
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^/ShadowBan/ /ShadowBan/index.html [L]
 </IfModule>
